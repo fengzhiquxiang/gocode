@@ -1,0 +1,29 @@
+// Charcount computes counts of Unicode characters.
+package main
+
+import (
+    "bufio"
+    "fmt"
+    "io"
+    "os"
+    "unicode"
+    "unicode/utf8"
+)
+
+func main() {
+	var graph = make(map[string]map[string]bool)
+}
+
+
+func addEdge(from, to string) {
+    edges := graph[from]
+    if edges == nil {
+        edges = make(map[string]bool)
+        graph[from] = edges
+    }
+    edges[to] = true
+}
+
+func hasEdge(from, to string) bool {
+    return graph[from][to]
+}
