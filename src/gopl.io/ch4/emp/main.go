@@ -3,24 +3,16 @@ package main
 
 import (
 	"fmt"
-	"time"
+	// "time"
+
+    "gopl.io/ch4/emp/haha"
 )
 
-type Employee struct {
-	ID        int
-	Name      string
-	Address   string
-	DoB       time.Time
-	Position  string
-	Salary    int
-	ManagerID int
-}
-
-var emp = make(map[int]*Employee)
+var emp = make(map[int]*haha.Employee)
 
 func main() {
-	var dilbert Employee
-    var thirdvar *Employee = &dilbert
+	var dilbert haha.Employee
+    var thirdvar *haha.Employee = &dilbert
     thirdvar.Position = "china"
     thirdvar.ID = 999
     thirdvar.Name = "zzz"
@@ -32,6 +24,6 @@ func main() {
     fmt.Println(EmployeeByID(1))
 }
 
-func EmployeeByID(id int) *Employee {
+func EmployeeByID(id int) *haha.Employee {
     return emp[id]
 }

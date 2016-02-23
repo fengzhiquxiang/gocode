@@ -11,7 +11,9 @@ type tree struct {
 }
 
 func main() {
-
+	var tr *tree
+	tr = add(tr, 4)
+	fmt.Println(tr)
 }
 
 // Sort sorts values in place.
